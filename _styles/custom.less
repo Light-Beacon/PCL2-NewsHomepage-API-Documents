@@ -1,0 +1,43 @@
+body{
+    --color-brand-content: #1f212f;
+    --color-background-code-block: #f8f8f8;
+    --color-background-code-block-http-method: #e0e3ea
+}
+
+@media (prefers-color-scheme: dark) {
+    body:not([data-theme=light]) {
+        --color-background-primary: #13181B;
+        --color-background-secondary: #1A1F25;
+        --color-background-code-block: #202329;
+        --color-background-code-block-http-method: #303347
+    }}
+
+body[data-theme=dark]{
+    --color-background-primary: #13181B;
+    --color-background-secondary: #1A1F25;
+    --color-background-code-block: #202329;
+    --color-background-code-block-http-method: #303347
+}
+
+.highlight{
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    background: var(--color-background-secondary) !important;
+}
+
+button.copybtn.success::after {
+    color: rgb(26, 159, 26);
+}
+
+a.footer-icon{
+    color: var(--color-foreground-primary) !important
+}
+
+img{
+    border-radius: 1em;
+}
+
+div.highlight-default{
+    align-items: center;
+}

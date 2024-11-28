@@ -58,14 +58,14 @@ html_theme = 'furo' #press #sphinx_book_theme #sphinx_wagtail_theme #furo
 
 html_theme_options = {
     "source_repository": "https://github.com/Light-Beacon/PCL2-NewsHomepage-API-Documents",
-    "source_branch": "master",
+    "source_branch": "main",
     "source_directory": ".",
     "navigation_with_keys": True,
     "top_of_page_button": "edit",
     "footer_icons": [
         {
             "name": "GitHub",
-            "url": "https://github.com/Light-Beacon/PCL2-NewsHomepage-API-Documents",
+            "url": "https://github.com/Light-Beacon/PCL2-NewsHomepage",
             "html": "",
             "class": "fa-brands fa-solid fa-github fa-2x footer-icon",
         },

@@ -9,4 +9,6 @@
     :maxdepth: 2
     :hidden:
 
-    test
+    apis/status
+    apis/version/latest
+    apis/version/latest-card

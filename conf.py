@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-# region Compile Less
+# region Process Style Files
 import subprocess
 import shutil
 from pathlib import Path
@@ -14,7 +14,6 @@ from pathlib import Path
 def compile_less_to_css():
     less_path = Path("_styles")
     css_path = Path("_generated/styles")
-    shutil.rmtree(css_path)
     less_files = list(less_path.rglob("*.less"))
     for less_file in less_files:
         css_file = css_path / less_file.relative_to(less_path).with_suffix(".css")
@@ -22,7 +21,21 @@ def compile_less_to_css():
                         "--source-map","--source-map-include-source"], check=True)
         print(f'Compling {less_file.name}')
 
+def copy_css():
+    css_path = Path("_styles")
+    css_files = list(css_path.rglob("*.css"))
+    for css_file in css_files:
+        shutil.copy2(css_file, Path("_generated/styles") / css_file.relative_to(css_path))
+        print(f'Copying {css_file.name}')
+
+def clear_generated():
+    if Path("_generated").exists():
+        shutil.rmtree(Path("_generated"))
+    Path("_generated/styles").mkdir(parents=True, exist_ok=True)
+
+clear_generated()
 compile_less_to_css()
+copy_css()
 # endregion
 
 project = 'PCL2-NewsHomepage-API'

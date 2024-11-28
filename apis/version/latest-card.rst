@@ -40,4 +40,4 @@
 PCL2显示效果
 ++++++++++++
 
-.. image:: https://private-user-images.githubusercontent.com/49828867/362545354-ec04b040-8651-425b-af68-4b0546ebd196.png
+.. image:: https://news.docs.bugjump.net/_static/images/LatestCardScreenShot.png

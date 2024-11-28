@@ -1,0 +1,4 @@
+*.rst linguist-vendored=false
+*.rst linguist-generated=false
+*.rst linguist-documentation=false
+*.rst linguist-detectable=true
